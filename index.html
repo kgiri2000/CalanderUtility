@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calander Utility</title>
+  <link rel = "stylesheet" href = "styles.css">
+
+</head>
+<body>
+
+<div class="tab-container">
+  <!-- Tab Header -->
+  <div class="tab-header">
+    <div class="tab-link active" onclick="openTab(event, 'basic-info')">Basic Info</div>
+    <div class="tab-link" onclick="openTab(event, 'recommendations')">Recommendations</div>
+    <div class="tab-link" onclick="openTab(event, 'hotels')">Hotels</div>
+    <div class="tab-link" onclick="openTab(event, 'food')">Food</div>
+    <div class="tab-link" onclick="openTab(event, 'flights')">Flights</div>
+    <div class="tab-link" onclick="openTab(event, 'exit')">Exit</div>
+  </div>
+
+  <!-- Tab Content -->
+  <div id="basic-info" class="tab-content active">
+    <div class="info-box">
+      <strong>Traffic: Traffic near 1150N </strong>
+      <strong1> Add to the Calander</strong1>
+      
+    </div>
+    <div class="info-box">
+      <strong>Weather: 44°F, Mostly Sunny, Clear Night </strong>
+      <strong>Weather Warning: Max Temperature 70°F</strong>
+      <strong1> Add to the Calander</strong1>
+      
+    </div>
+    <div class="info-box">
+      <strong>First day of American Indian Heritage Month </strong>
+    </div>
+    <div class="info-box">
+        <strong>Dentist </strong>
+        <strong>11:00 - 12:00 </strong>
+    </div>
+    <div class="info-box">
+        <strong>launch </strong>
+        <strong>12:00 - 13:00 </strong>
+    </div>
+    <div class="info-box">
+        <strong>Project 1 </strong>
+        <strong>15:00 - 18:00 </strong>
+    </div>
+
+  </div>
+  <div id="recommendations" class="tab-content">
+    <p>Here are some recommendations for you.</p>
+    <div class="info-box">
+        <strong>Snowrange Skin Area is Open now. </strong>
+        <strong1> Add to the Calander</strong1>
+        
+      </div>
+      <div class="info-box">
+        <strong>Night Show: Quadrantids Meteor Shower </strong>  
+        <strong1> Add to the Calander</strong1>
+      </div>
+      <div class="info-box">
+        <strong>Event: First day of American Indian Heritage Month </strong>
+        <strong1> Add to the Calander</strong1>
+        
+      </div>
+
+  </div>
+  <div id="hotels" class="tab-content">
+    <p>Find the best hotels for your stay.</p>
+    <h3> Search Hotels</h3>
+    <div class="search-box">
+        <input type="text" placeholder="Find Hotel">
+    </div>
+    <h3>Available Hotels in Laramie</h3>
+    <div class="hotel-list">
+      <div class="hotel-item">
+          <h4>Hotel Laramie Inn</h4>
+          <p><strong>Price per night:</strong> $120</p>
+          <p><strong>Rating:</strong> ★★★★☆</p>
+          <p><strong>Available Dates:</strong> Nov 1 - Nov 5, 2024</p>
+          <h4> Add to the Calander</h4>
+      </div>
+      <div class="hotel-item">
+          <h4>University of Wyoming Conference Center</h4>
+          <p><strong>Price per night:</strong> $150</p>
+          <p><strong>Rating:</strong> ★★★★☆</p>
+          <p><strong>Available Dates:</strong> Nov 2 - Nov 6, 2024</p>
+          <h4> Add to the Calander</h4>
+      </div>
+      <div class="hotel-item">
+          <h4>Comfort Inn & Suites</h4>
+          <p><strong>Price per night:</strong> $110</p>
+          <p><strong>Rating:</strong> ★★★☆☆</p>
+          <p><strong>Available Dates:</strong> Nov 3 - Nov 7, 2024</p>
+          <h4> Add to the Calander</h4>
+      </div>
+    </div>
+  </div>
+  <div id="food" class="tab-content">
+    <h2>Food</h2>
+    <p>Explore popular food options and cuisines.</p>
+  </div>
+  <div id="flights" class="tab-content">
+    <h2>Flights</h2>
+    <p>Check available flights to your destination.</p>
+  </div>
+  <div id="flight" class="tab-content">
+    <h2>Flights</h2>
+    <p>Check available flights to your destination.</p>
+  </div>
+
+</div>
+
+<script>
+  function openTab(event, tabId) {
+    // Hide all tab contents
+    var tabContents = document.getElementsByClassName("tab-content");
+    for (var i = 0; i < tabContents.length; i++) {
+      tabContents[i].style.display = "none";
+      tabContents[i].classList.remove("active");
+    }
+
+    // Remove active class from all tab links
+    var tabLinks = document.getElementsByClassName("tab-link");
+    for (var i = 0; i < tabLinks.length; i++) {
+      tabLinks[i].classList.remove("active");
+    }
+
+    // Show the current tab content and add active class to the clicked tab link
+    document.getElementById(tabId).style.display = "block";
+    document.getElementById(tabId).classList.add("active");
+    event.currentTarget.classList.add("active");
+  }
+</script>
+
+</body>
+</html>

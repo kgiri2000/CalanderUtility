@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8f9296;
+  }
+
+  /* Container */
+  .tab-container {
+      
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
+    background-color: #979ca1;
+  }
+
+  /* Tab header styling */
+  .tab-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+  }
+
+  .tab-header div {
+    flex: 1;
+    padding: 5px 15px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    border-radius: 12px 12px 0 0; /* Oval shape */
+    margin: 0 5px;
+    background-color: #b9afaf; /* Gray for inactive tabs */
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* Active tab */
+  .tab-header .active {
+    background-color: #ffffff; /* White background for active tab */
+    color: #007BFF;
+    border-bottom: 2px solid #fff; /* Seamless with content */
+  }
+
+  /* Tab content styling */
+  .tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #8f9296;
+    border-top: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  /* Info box styling */
+  .info-box {
+    background-color: #55a8f0;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .info-box strong {
+    display: block;
+    color: #f0f2f3;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .info-box strong1{
+      color: rgb(226, 16, 16);
+      font-size: 12px;
+
+  }
+      /* Search box styling */
+      .search-box {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-box input {
+    width: 100%;
+    max-width: 300px; /* Adjust the width of the search box */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+
+  .search-box input::placeholder {
+    color: #aaa; /* Placeholder color */
+  }
+
+  .search-box input:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+      /* Hotel list styling */
+      .hotel-list {
+    margin-top: 20px;
+  }
+
+  .hotel-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  .hotel-item h4 {
+    margin: 0;
+    color: #007BFF;
+  }
+
+  .hotel-item p {
+    margin: 5px 0;
+  }
