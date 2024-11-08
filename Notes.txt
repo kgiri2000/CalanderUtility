@@ -1,0 +1,151 @@
+#Chrome Developer Tools to debugg the websites using Javascript Console
+
+#Adding HTML element:
+//Selecting the class 
+const container = document.querySelector('.o3j99.qarstb');
+//<input> element of type search
+const searchBar = document.createElement('input');
+searchBar.type = 'search';
+searchBar.placeholder = 'Search...';
+searchBar.className = 'custom-search';
+container.appendChild(searchBar);
+
+#Now to style the input element we can do it in three ways:
+
+1., Inline Stles( Directly in Javascript)
+
+const container = document.querySelector('.o3j99.qarstb');
+const searchBar = document.createElement('input');
+searchBar.type = 'search';
+searchBar.placeholder = 'Search...';
+searchBar.className = 'custom-search';
+
+searchBar.style.padding = '8px';           // Add padding
+searchBar.style.width = '200px';           // Set width
+searchBar.style.borderRadius = '4px';      // Rounded corners
+searchBar.style.border = '1px solid #ccc'; // Border style
+searchBar.style.outline = 'none';          // Remove default outline
+searchBar.style.marginTop = '10px';        // Optional: Add space above
+
+container.appendChild(searchBar);
+
+2. Add a <style> Tag to the document //Recommended
+
+const style = document.createElement('style');
+style.textContent = `
+  .custom-search {
+    padding: 8px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-top: 10px;
+  }
+`;
+document.head.appendChild(style);
+
+3.Using the Existing <style> tag in the container
+
+Since the <div class="o3j99 qarstb"> element already has a <style> tag, you could add CSS directly to it. 
+Here’s how you can add styles to the existing <style> element within the container:
+
+const containerStyle = document.querySelector('.o3j99.qarstb style');
+containerStyle.textContent += `
+  .custom-search {
+    padding: 8px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-top: 10px;
+  }
+`;
+
+const container = document.querySelector('.o3j99.qarstb');
+const searchBar = document.createElement('input');
+searchBar.type = 'search';
+searchBar.placeholder = 'Search...';
+searchBar.className = 'custom-search';
+container.appendChild(searchBar);
+
+
+Adding 2 divs inside already Existed div
+// Select the container
+const container = document.querySelector('.o3j99.qarstb');
+
+// Create two div elements with the custom class
+const div1 = document.createElement('div');
+const div2 = document.createElement('div');
+
+// Apply the custom class to the divs
+div1.className = 'custom-div';
+div2.className = 'custom-div';
+
+// Create a list inside div1
+const list1 = document.createElement('ul');
+const listItem1A = document.createElement('li');
+listItem1A.textContent = 'Item 1A';
+const listItem1B = document.createElement('li');
+listItem1B.textContent = 'Item 1B';
+list1.appendChild(listItem1A);
+list1.appendChild(listItem1B);
+div1.appendChild(list1);
+
+// Create a list inside div2
+const list2 = document.createElement('ul');
+const listItem2A = document.createElement('li');
+listItem2A.textContent = 'Item 2A';
+const listItem2B = document.createElement('li');
+listItem2B.textContent = 'Item 2B';
+list2.appendChild(listItem2A);
+list2.appendChild(listItem2B);
+div2.appendChild(list2);
+
+// Apply the container style
+container.className = 'custom-container';
+
+// Append the divs to the container
+container.appendChild(div1);
+container.appendChild(div2);
+
+// Create a new <style> tag
+const style = document.createElement('style');
+
+// Add multiple CSS rules to it
+style.textContent = `
+  .custom-search {
+    padding: 8px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-top: 10px;
+  }
+
+  .custom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .custom-div {
+    flex: 1;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+
+  .custom-div ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .custom-div li {
+    margin-bottom: 5px;
+  }
+`;
+
+// Append the <style> tag to the document's <head>
+document.head.appendChild(style);
+
